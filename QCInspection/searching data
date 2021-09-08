@@ -1,0 +1,48 @@
+<html>
+    
+<body>
+        
+        
+<?php
+        
+        
+$dbname = 'mika';
+        
+$dbuser = 'root';
+        
+$dbpass = '';
+        
+$dbhost = 'localhost';
+        
+        
+$connect = @mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
+     
+if(!$connect){
+            
+echo"Error: " . mysqli_connect_error();
+            
+exit();
+        }
+        
+        
+echo "Connection Success!<br><br>";
+        
+        
+        
+$ = $_GET["cond"];
+              
+        
+$query = "INSERT INTO qcinspection (COND) VALUES ('$cond')";
+        
+$result = mysqli_query($connect,$query);
+        
+        
+echo "Insert Success!<br>";
+        
+        
+?>
+        
+    
+</body>
+
+</html>
